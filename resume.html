@@ -1,323 +1,456 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Pretendard';
-    color: #222222;
-    font-size: 12px;
-    font-weight: regular;
-    display: flex;
-  }
-
-
-  body {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  button {
-     background-color: #FFFFFF;
-     margin: none;
-     padding: none;
-     border: none;
-  }
-
-
-  p.header-title { font-size: 16px; }
-  p.atf-title { font-size: 18px; font-weight: medium; }
-  p.atf-subtitle { color: #535353; font-size: 14px; font-weight: regular; }
-  p.atf-nomalprice { color: #BDBDBD; font-size: 14px; font-weight: medium; text-decoration: line-through; }
-  p.atf-increase { color: #18A957; font-size: 20px; font-weight: bold; }
-  p.atf-price { font-size: 20px; font-weight: bold; }
-  
-  p.content-tag { color: #EEEEEE; font-size: 13px; font-weight: medium; background-color: #222222; padding: 2px 6px;}
-  p.content-title { font-size: 24px; font-weight: bold; }
-  p.content-detail { font-size: 15px; font-weight: medium; text-align: center; line-height: 150%;}
-  p.content-guide { color: #535353; }
-  p.content-alarm { color: #9EA590; }
-
-  p.company-name { color: #18A957; font-weight: bold; }
-  p.company-divider { font-weight: bold; }
-  p.company-type { font-weight: bold; }
-
-  p.period-start {color: #757575; font-size: 11px;}
-  p.period-divider {color: #757575; font-size: 11px;}
-  p.period-end {color: #757575; font-size: 11px;}
-
-  p.project-name {color: #535353;}
-
-  p.skills-title {font-weight: bold;}
-  p.skills-detail {color: #757575; font-size: 11px;}
-
-  p.skill {color: #18A957; font-weight: bold;}
-  p.skill-divider {color: #18A957; font-weight: bold;}
-  p.skill-level {color: #18A957; font-weight: bold;}
-
-
-  .gap {
-    height: 6px;
-  }
-
-  .headergap {
-    height: 50px;
-  }
-
-  .footergap {
-    height: 50px;
-  }
-
-  .divider {
-    width: auto;
-    height: 1px;
-    background-color: #EEEEEE;
-  }
-
-  .btntype1 {
-    border: 1px solid #DBDBDB;
-    height: 42px;
-    width: 50%;
-    background-color: #FFFFFF;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-  }
-
-  .btntype2 {
-    color: #EEEEEE;
-    border: 1px solid #DBDBDB;
-    height: 42px;
-    width: 50%;
-    background-color: #18A957;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-  }
-
-  
-
-  header.header-wrap {
-    padding: 20px 16px;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 10px;
-    position: fixed; /* 화면 상단에 고정 */
-    top: 0; /* 상단에서의 거리 */
-    background-color: #FFFFFF;
-  }
-  
-
-  footer.footer-wrap {
-    padding: 6px 16px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    background-color: #FFFFFF;
-  }
-
-
-
-
-  .ATF {
-    width: 100%;
-    flex-direction: column;
-    gap: 1.5vh;
-  }
-
-  .main * {
-    width: 100%;
-  }
-
-  .section-wrap {
-    flex-direction: column;
-  }
-
-  .section-wrap > * {
-    padding: 3px 16px 12px 16px;
-    width: 100%;
-  }
-
-  .section-row1 * {
-    flex-direction: row;
-    height:20px;
-    gap: 6px;
-  }
-
-  .section-row1 {
-    justify-content: space-between;
-  }
-
-  .section-row2 {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .atf-result {
-    flex-direction: row;
-    gap: 6px;
-  }
-
-
-
-
-  .content {
-    padding: 40px 0px;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    height: auto;
-    background: linear-gradient(to bottom, #E6F5ED, #FFFFFF, #FFFFFF);
-    overflow: hidden;
-  }
-
-  .career-box {
-    flex-direction: column;
-    background-color: #FFFFFF;
-    border-radius: 6px;
-    padding: 16px;
-    margin: 10px 0px 5px 0px;
-    width: 280px;
-    gap: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
-
-  }
-
-  .career-info-row-1{
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    gap: 12px;
-  }
-
-  .career-info{
-    flex-direction: column;
-    width: 200px;
-    gap: 2px;
-  }
-
-  .brand-thumnail {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #EEEEEE;
-    border-radius: 5px;
-  }
-
-  .right-arros {
-    width: 20px;
-    height: 20px;
-  }
-
-  .company-info {
-    gap: 3px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="global-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="./resume.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="./resume.js"></script>
+  </head>
+
+  <body>
+
+    <!-- 헤더 -->
+    <header id="header-wrap" class="header-wrap">
+        <a href="javascipt:;" class="header-btn"><img src="./custom/icon_backarrow.svg" alt="로고"></a>
+        <p class="header-title">포트폴리오</p>
+        <!-- 명함 다운로드 추가 -->
+        <a href="javascipt:;" class="header-btn"><img src="./custom/icon_home.svg" alt="명함"></a>
+    </header>
+
+
+    <div class="headergap"></div>
+
+
+    <!-- ATF 영역역 -->
+    <div id="ATF" class="ATF">
+        <!-- 메인 이미지 -->
+        <div id="main" class="main">
+            <img src="./custom/main.png" alt="메인 이미지">            
+        </div>
+
+
+        <div id="section-wrap" class="section-wrap">
+            
+            <!-- 첫째 행 -->
+            <div id="section-row1" class="section-row1">
+                <div id="label-wrap" class="atf-element">
+                    <!-- 라벨 -->
+                    <img src="./custom/label_01.png">
+                    <img src="./custom/label_02.png">
+                </div>
+
+                <div id="engagement-wrap" class="atf-element">
+                    <!-- 인게이지먼트 -->
+                    <button onclick="changeIconLikeOn()" id="btnLike"><img src="./custom/icon_like_off.svg" id="icon_like"></button>
+                    <button onclick="changeIconShareOn()" id="btnShare"><img src="./custom/icon_share_off.svg" id="icon_share"></button>
+                </div>
+            </div>
+
+            <!-- 둘째 행 -->
+            <div id="section-row2" class="section-row2">
+                <p id="atf-title" class="atf-title">놀랍도록 섬세하고 디테일한 기획</p>
+                <p id="atf-subtitle" class="atf-subtitle">프리미엄 인재</p>
+                
+                <div class="gap"></div>
 
-  .period-info {
-    gap: 3px;
-  }
+                <p id="atf-nomalprice" class="atf-nomalprice">￦ 88,000,000</p>
+                <div id="atf-result" class="atf-result">
+                    <p id="atf-increase" class="atf-increase">↑ 11%</p>
+                    <p id="atf-price" class="atf-price">￦ 99,000,000</p>
+                </div>
 
+            </div>
+        </div>
 
-  .project {
-    align-items: center;
-    gap: 3px;
-  }
+    </div>
+
+
+    <!-- 상세페이지 내용 -->
+    <div id="content" class="content">
+
+
+        <!-- 텍스트 영역 -->
+        <div id="tag-career" class="tag-career"><p id="content-tag" class="content-tag">CAREER</p></div>
+        <p id="content-title" class="content-title">플랫폼 사업 맞춤형 인재</p>
+        <p id="content-detail" class="content-detail">지도 · 부동산 · 커머스까지
+            <br>
+            다양한 도메인 경험이 있습니다
+        </p>
+        <p id="content-guide" class="content-guide">지도 기반 · 정보 제공형 · 결제 시스템 이해도 ↑</p>
+
+
+        <!-- 러쉬 커리어 박스 -->
+        <div id="career-box1" class="career-box">
+
+
+            <!-- 첫 행 -->
+            <div id="career-info-row-1" class="career-info-row-1">
+
+                <!-- 앱 로고 -->
+                <img src="./custom/thumnail_lush.png" alt="러쉬 로고" class="brand-thumnail">
+
+                
+                <div class="career-info">
+                    
+                    <!-- 브랜드이름, 플랫폼 유형 -->
+                    <div class="company-info">
+                        <p class="company-name">러쉬</p>
+                        <p class="company-divider"> · </p>
+                        <p class="company-type">코스메틱 커머스 플랫폼</p>
+                    </div>
+                    
+                    <!-- 기간 정보 -->
+                    <div class="period-info">
+                        <p class="period-start">2024-07-22</p>
+                        <p class="period-divider"> ~ </p>
+                        <p class="period-end">재직중</p>
+                    </div>
+                    
+                </div>
 
-  .project-thumnail {
-    width: 20px;
-    height: 20px;
-  }
+                <!-- 상세보기 화살표 -->
+                <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
 
 
-  .career-info-row-2 {
-    justify-content: space-between;
-  }
+            </div>
 
+            <!-- 디바이더 -->
+            <div class="divider"></div>
 
 
-  .raidorchart {
-    width: 260px;
-  }
+            <!-- 둘째 행 -->
+            <div id="career-info-row-2" class="career-info-row-2">
 
+                <div class="project">
+                    <img src="./custom/project_main.png" alt="메인개편" class="project-thumnail">
+                    <p class="project-name">메인개편</p>
+                </div>
 
+                <div class="project">
+                    <img src="./custom/project_giftcard.png" alt="상품권" class="project-thumnail">
+                    <p class="project-name">상품권</p>
+                </div>
 
+                <div class="project">
+                    <img src="./custom/project_editorpick.png" alt="에디터픽" class="project-thumnail">
+                    <p class="project-name">에디터픽</p>
+                </div>
 
-  .skills-box {
-    align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 4px;
-    padding: 12px;
-    width: 280px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
-    gap: 6px;
-  }
+                <div class="project">
+                    <img src="./custom/project_promotion.png" alt="프로모션" class="project-thumnail">
+                    <p class="project-name">프로모션</p>
+                </div>
 
 
-  .skills-thumnail {
-    width: 37px;
-    height: 37px;
-  }
+            </div>
 
-  .skills-info {
-    flex-direction: column;
-    width: 300px;
-    gap: 3px;
-  }
 
+        </div>
 
 
-  .tag-skill-wrap {
-    width: 220px;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+        <!-- 네모 커리어 박스 -->
+        <div id="career-box2" class="career-box">
 
-  .tag-skill {
-    background-color: #E4FBEE; 
-    border-radius: 2px; 
-    padding: 2px 4px;
-    gap: 3px;
-  }
 
+            <!-- 첫 행 -->
+            <div id="career-info-row-1" class="career-info-row-1">
 
-  .content-alarm-wrap {
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-  }
+                <!-- 앱 로고 -->
+                <img src="./custom/thumnail_nemo.png" alt="네모 로고" class="brand-thumnail">
 
-  .icon_alarm {
-    width: 16px;
-    height: 16px;
-  }
+                
+                <div class="career-info">
+                    
+                    <!-- 브랜드이름, 플랫폼 유형 -->
+                    <div class="company-info">
+                        <p class="company-name">네모</p>
+                        <p class="company-divider"> · </p>
+                        <p class="company-type">상업용 부동산 플랫폼</p>
+                    </div>
+                    
+                    <!-- 기간 정보 -->
+                    <div class="period-info">
+                        <p class="period-start">2023-03-02</p>
+                        <p class="period-divider"> ~ </p>
+                        <p class="period-end">2024-05-27</p>
+                    </div>
+                    
+                </div>
 
+                <!-- 상세보기 화살표 -->
+                <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
 
-  .reference-wrap {
-    flex-direction: row;
-    justify-content: left;
-    gap: 6px;
-    overflow: visible;
 
-  }
+            </div>
 
-  .reference-box {
-    background-color: #F6F6F6;
-    height: 300px;
-    width: 270px;
-  }
+            <!-- 디바이더 -->
+            <div class="divider"></div>
 
 
+            <!-- 둘째 행 -->
+            <div id="career-info-row-2" class="career-info-row-2">
 
+                <div class="project">
+                    <img src="./custom/project_article.png" alt="수익형 부동산" class="project-thumnail">
+                    <p class="project-name">수익형 부동산</p>
+                </div>
 
+                <div class="project">
+                    <img src="./custom/project_b2b.png" alt="B2B 의뢰하기" class="project-thumnail">
+                    <p class="project-name">B2B 의뢰하기</p>
+                </div>
 
+                <div class="project">
+                    <img src="./custom/project_crm.png" alt="매물 CRM" class="project-thumnail">
+                    <p class="project-name">매물 CRM</p>
+                </div>
 
 
+            </div>
 
+
+        </div>
+
+
+        <!-- 카카오맵 커리어 박스 -->
+        <div id="career-box3" class="career-box">
+
+
+            <!-- 첫 행 -->
+            <div id="career-info-row-1" class="career-info-row-1">
+
+                <!-- 앱 로고 -->
+                <img src="./custom/thumnail_kakaomap.png" alt="카카오맵 로고" class="brand-thumnail">
+
+                
+                <div class="career-info">
+                    
+                    <!-- 브랜드이름, 플랫폼 유형 -->
+                    <div class="company-info">
+                        <p class="company-name">카카오맵</p>
+                        <p class="company-divider"> · </p>
+                        <p class="company-type">생활 편의 플랫폼</p>
+                    </div>
+                    
+                    <!-- 기간 정보 -->
+                    <div class="period-info">
+                        <p class="period-start">2018-02-13</p>
+                        <p class="period-divider"> ~ </p>
+                        <p class="period-end">2019-02-13</p>
+                    </div>
+                    
+                </div>
+
+                <!-- 상세보기 화살표 -->
+                <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+            </div>
+
+            <!-- 디바이더 -->
+            <div class="divider"></div>
+
+
+            <!-- 둘째 행 -->
+            <div id="career-info-row-2" class="career-info-row-2">
+
+                <div class="project">
+                    <img src="./custom/project_map.png" alt="수익형 부동산" class="project-thumnail">
+                    <p class="project-name">테마지도 콘텐츠</p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="gap"></div>
+        <div class="gap"></div>
+
+
+        <!-- 텍스트 영역 -->
+        <div id="tag-skills" class="tag-skills"><p id="content-tag" class="content-tag">SKILLS</p></div>
+        <p id="content-title" class="content-title">육각 성장형 인재</p>
+        <p id="content-detail" class="content-detail">
+            비즈니스와 시장에 대한 이해도를 갖추고
+            <br>
+            기술적인 이해와 경험을 바탕으로
+            <br>
+            유효한 서비스를 기획하고자 노력합니다
+        </p>
+
+
+
+        <div class="gap"></div>
+
+
+
+        <!-- 레이더 차트 영역 -->
+        <img src="./custom/raidor chart.png" alt="raidorchart" class="raidorchart">
+
+
+
+        <div class="gap"></div>
+
+
+
+        <!-- 스킬 태그 영역 -->
+        <div id="tag-skill-wrap" class="tag-skill-wrap">
+            <div id="tag-skill1" class="tag-skill">
+                <p class="skill">Figma</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">중상</p>
+            </div>
+    
+            <div id="tag-skill2" class="tag-skill">
+                <p class="skill">Tableau</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">중</p>
+            </div>
+    
+            <div id="tag-skill3" class="tag-skill">
+                <p class="skill">React </p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">하</p>
+            </div>
+    
+            <div id="tag-skill4" class="tag-skill">
+                <p class="skill">HTML</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">하</p>
+            </div>
+    
+            <div id="tag-skill5" class="tag-skill">
+                <p class="skill">JavaScript</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">하</p>
+            </div>
+        </div>
+        
+
+
+        <div class="gap"></div>
+
+
+
+        
+        <div id="skills-box1" class="skills-box">
+
+            <!-- 아이콘 영역 -->
+            <img src="./custom/icon_person.png" alt="사람람" class="skills-thumnail">
+
+            
+            <div class="skills-info">
+            
+                <p class="skills-title">회원가입 사용자 화면</p>
+                <p class="skills-detail">프론트엔드 산출물 인적정보 유효성 검사</p>
+                
+            </div>
+
+            <!-- 상세보기 화살표 -->
+            <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+        </div>
+
+        <div id="skills-box2" class="skills-box">
+
+            <!-- 아이콘 영역 -->
+            <img src="./custom/icon_coin.png" alt="계산기" class="skills-thumnail">
+
+            
+            <div class="skills-info">
+            
+                <p class="skills-title">계산기 사용자 화면</p>
+                <p class="skills-detail">프론트엔드 교육 과정 산출물로 사칙연산 구현</p>
+                
+            </div>
+
+            <!-- 상세보기 화살표 -->
+            <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+        </div>
+
+        <div id="skills-box3" class="skills-box">
+
+            <!-- 아이콘 영역 -->
+            <img src="./custom/icon_box.png" alt="박스" class="skills-thumnail">
+
+            
+            <div class="skills-info">
+            
+                <p class="skills-title">SALONE 두피 진단 플랫폼</p>
+                <p class="skills-detail">두피 데이터 활용한 서비스 아이디어톤 최우수상</p>
+                
+            </div>
+
+            <!-- 상세보기 화살표 -->
+            <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+        </div>
+
+
+        <div class="gap"></div>
+        <div class="gap"></div>
+
+
+
+        <!-- 텍스트 영역 -->
+        <div id="tag-coworking" class="tag-coworking"><p id="content-tag" class="content-tag">CO-WORKING</p></div>
+        <p id="content-title" class="content-title">동료로 추천할만한 기획자</p>
+        <p id="content-detail" class="content-detail">
+            밀도 높은 소통으로
+            <br>
+            이해의 간극을 좁혀가고자 노력합니다
+        </p>
+
+
+        <div class="gap"></div>
+
+        <div class="content-alarm-wrap">
+            <img src="./custom/icon_alarm.png" alt="인포" class="icon_alarm">
+            <p class="content-alarm">리뷰를 클릭하면 전체 내용을 열람할 수 있습니다</p>
+        </div>
+
+
+
+        <div id="reference-wrap" class="reference-wrap">
+            <div id="reference-box1" class="reference-box">
+            </div>
+            <div id="reference-box2" class="reference-box">
+            </div>
+            <div id="reference-box3" class="reference-box">
+            </div>
+            <div id="reference-box3" class="reference-box">
+            </div>
+        </div>
+
+
+    
+    
+    </div>
+
+  </body>
+
+
+  <div class="footergap"></div>
+
+
+  <footer id="footer-wrap" class="footer-wrap">
+    <button class="btntype1" onclick="messageMail()">메일 문의하기</button>
+    <button class="btntype2" onclick="messageInterview()">면접 제안하기</button>
+
+  </footer>
+</html>
