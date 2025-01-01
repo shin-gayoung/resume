@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="global-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="./resume.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="./resume.js"></script>
+  </head>
+
+  <body>
+
+    <!-- 헤더 -->
+    <header id="header-wrap" class="header-wrap">
+        <a href="javascipt:;" class="header-btn"><img src="./custom/icon_backarrow.svg" alt="로고"></a>
+        <p class="header-title">포트폴리오</p>
+        <!-- 명함 다운로드 추가 -->
+        <a href="javascipt:;" class="header-btn"><img src="./custom/icon_home.svg" alt="명함"></a>
+    </header>
+
+
+    <div class="headergap"></div>
+
+
+    <!-- ATF 영역역 -->
+    <div id="ATF" class="ATF">
+        <!-- 메인 이미지 -->
+        <div id="main" class="main">
+            <img src="./custom/main.png" alt="메인 이미지">            
+        </div>
+
+
+        <div id="section-wrap" class="section-wrap">
+            
+            <!-- 첫째 행 -->
+            <div id="section-row1" class="section-row1">
+                <div id="label-wrap" class="atf-element">
+                    <!-- 라벨 -->
+                    <img src="./custom/label_01.png">
+                    <img src="./custom/label_02.png">
+                </div>
+
+                <div id="engagement-wrap" class="atf-element">
+                    <!-- 인게이지먼트 -->
+                    <button onclick="changeIconLikeOn()" id="btnLike"><img src="./custom/icon_like_off.svg" id="icon_like"></button>
+                    <button onclick="changeIconShareOn()" id="btnShare"><img src="./custom/icon_share_off.svg" id="icon_share"></button>
+                </div>
+            </div>
+
+            <!-- 둘째 행 -->
+            <div id="section-row2" class="section-row2">
+                <p id="atf-title" class="atf-title">놀랍도록 섬세하고 디테일한 기획</p>
+                <p id="atf-subtitle" class="atf-subtitle">프리미엄 인재</p>
+                
+                <div class="gap"></div>
+
+                <p id="atf-nomalprice" class="atf-nomalprice">￦ 88,000,000</p>
+                <div id="atf-result" class="atf-result">
+                    <p id="atf-increase" class="atf-increase">↑ 11%</p>
+                    <p id="atf-price" class="atf-price">￦ 99,000,000</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 상세페이지 내용 -->
+    <div id="content" class="content">
+
+
+        <!-- 텍스트 영역 -->
+        <div id="tag-career" class="tag-career"><p id="content-tag" class="content-tag">CAREER</p></div>
+        <p id="content-title" class="content-title">플랫폼 사업 맞춤형 인재</p>
+        <p id="content-detail" class="content-detail">지도 · 부동산 · 커머스까지
+            <br>
+            다양한 도메인 경험이 있습니다
+        </p>
+        <p id="content-guide" class="content-guide">지도 기반 · 정보 제공형 · 결제 시스템 이해도 ↑</p>
+
+
+        <!-- 러쉬 커리어 박스 -->
+        <div id="career-box1" class="career-box">
+
+
+            <!-- 첫 행 -->
+            <div id="career-info-row-1" class="career-info-row-1">
+
+                <!-- 앱 로고 -->
+                <img src="./custom/thumnail_lush.png" alt="러쉬 로고" class="brand-thumnail">
+
+                
+                <div class="career-info">
+                    
+                    <!-- 브랜드이름, 플랫폼 유형 -->
+                    <div class="company-info">
+                        <p class="company-name">러쉬</p>
+                        <p class="company-divider"> · </p>
+                        <p class="company-type">코스메틱 커머스 플랫폼</p>
+                    </div>
+                    
+                    <!-- 기간 정보 -->
+                    <div class="period-info">
+                        <p class="period-start">2024-07-22</p>
+                        <p class="period-divider"> ~ </p>
+                        <p class="period-end">재직중</p>
+                    </div>
+                    
+                </div>
+
+                <!-- 상세보기 화살표 -->
+                <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+            </div>
+
+            <!-- 디바이더 -->
+            <div class="divider"></div>
+
+
+            <!-- 둘째 행 -->
+            <div id="career-info-row-2" class="career-info-row-2">
+
+                <div class="project">
+                    <img src="./custom/project_main.png" alt="메인개편" class="project-thumnail">
+                    <p class="project-name">메인개편</p>
+                </div>
+
+                <div class="project">
+                    <img src="./custom/project_giftcard.png" alt="상품권" class="project-thumnail">
+                    <p class="project-name">상품권</p>
+                </div>
+
+                <div class="project">
+                    <img src="./custom/project_editorpick.png" alt="에디터픽" class="project-thumnail">
+                    <p class="project-name">에디터픽</p>
+                </div>
+
+                <div class="project">
+                    <img src="./custom/project_promotion.png" alt="프로모션" class="project-thumnail">
+                    <p class="project-name">프로모션</p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 네모 커리어 박스 -->
+        <div id="career-box2" class="career-box">
+
+
+            <!-- 첫 행 -->
+            <div id="career-info-row-1" class="career-info-row-1">
+
+                <!-- 앱 로고 -->
+                <img src="./custom/thumnail_nemo.png" alt="네모 로고" class="brand-thumnail">
+
+                
+                <div class="career-info">
+                    
+                    <!-- 브랜드이름, 플랫폼 유형 -->
+                    <div class="company-info">
+                        <p class="company-name">네모</p>
+                        <p class="company-divider"> · </p>
+                        <p class="company-type">상업용 부동산 플랫폼</p>
+                    </div>
+                    
+                    <!-- 기간 정보 -->
+                    <div class="period-info">
+                        <p class="period-start">2023-03-02</p>
+                        <p class="period-divider"> ~ </p>
+                        <p class="period-end">2024-05-27</p>
+                    </div>
+                    
+                </div>
+
+                <!-- 상세보기 화살표 -->
+                <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+            </div>
+
+            <!-- 디바이더 -->
+            <div class="divider"></div>
+
+
+            <!-- 둘째 행 -->
+            <div id="career-info-row-2" class="career-info-row-2">
+
+                <div class="project">
+                    <img src="./custom/project_article.png" alt="수익형 부동산" class="project-thumnail">
+                    <p class="project-name">수익형 부동산</p>
+                </div>
+
+                <div class="project">
+                    <img src="./custom/project_b2b.png" alt="B2B 의뢰하기" class="project-thumnail">
+                    <p class="project-name">B2B 의뢰하기</p>
+                </div>
+
+                <div class="project">
+                    <img src="./custom/project_crm.png" alt="매물 CRM" class="project-thumnail">
+                    <p class="project-name">매물 CRM</p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 카카오맵 커리어 박스 -->
+        <div id="career-box3" class="career-box">
+
+
+            <!-- 첫 행 -->
+            <div id="career-info-row-1" class="career-info-row-1">
+
+                <!-- 앱 로고 -->
+                <img src="./custom/thumnail_kakaomap.png" alt="카카오맵 로고" class="brand-thumnail">
+
+                
+                <div class="career-info">
+                    
+                    <!-- 브랜드이름, 플랫폼 유형 -->
+                    <div class="company-info">
+                        <p class="company-name">카카오맵</p>
+                        <p class="company-divider"> · </p>
+                        <p class="company-type">생활 편의 플랫폼</p>
+                    </div>
+                    
+                    <!-- 기간 정보 -->
+                    <div class="period-info">
+                        <p class="period-start">2018-02-13</p>
+                        <p class="period-divider"> ~ </p>
+                        <p class="period-end">2019-02-13</p>
+                    </div>
+                    
+                </div>
+
+                <!-- 상세보기 화살표 -->
+                <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+            </div>
+
+            <!-- 디바이더 -->
+            <div class="divider"></div>
+
+
+            <!-- 둘째 행 -->
+            <div id="career-info-row-2" class="career-info-row-2">
+
+                <div class="project">
+                    <img src="./custom/project_map.png" alt="수익형 부동산" class="project-thumnail">
+                    <p class="project-name">테마지도 콘텐츠</p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="gap"></div>
+        <div class="gap"></div>
+
+
+        <!-- 텍스트 영역 -->
+        <div id="tag-skills" class="tag-skills"><p id="content-tag" class="content-tag">SKILLS</p></div>
+        <p id="content-title" class="content-title">육각 성장형 인재</p>
+        <p id="content-detail" class="content-detail">
+            비즈니스와 시장에 대한 이해도를 갖추고
+            <br>
+            기술적인 이해와 경험을 바탕으로
+            <br>
+            유효한 서비스를 기획하고자 노력합니다
+        </p>
+
+
+
+        <div class="gap"></div>
+
+
+
+        <!-- 레이더 차트 영역 -->
+        <img src="./custom/raidor chart.png" alt="raidorchart" class="raidorchart">
+
+
+
+        <div class="gap"></div>
+
+
+
+        <!-- 스킬 태그 영역 -->
+        <div id="tag-skill-wrap" class="tag-skill-wrap">
+            <div id="tag-skill1" class="tag-skill">
+                <p class="skill">Figma</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">중상</p>
+            </div>
+    
+            <div id="tag-skill2" class="tag-skill">
+                <p class="skill">Tableau</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">중</p>
+            </div>
+    
+            <div id="tag-skill3" class="tag-skill">
+                <p class="skill">React </p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">하</p>
+            </div>
+    
+            <div id="tag-skill4" class="tag-skill">
+                <p class="skill">HTML</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">하</p>
+            </div>
+    
+            <div id="tag-skill5" class="tag-skill">
+                <p class="skill">JavaScript</p>
+                <p class="skill-divider"> · </p>
+                <p class="skill-level">하</p>
+            </div>
+        </div>
+        
+
+
+        <div class="gap"></div>
+
+
+
+        
+        <div id="skills-box1" class="skills-box">
+
+            <!-- 아이콘 영역 -->
+            <img src="./custom/icon_person.png" alt="사람람" class="skills-thumnail">
+
+            
+            <div class="skills-info">
+            
+                <p class="skills-title">회원가입 사용자 화면</p>
+                <p class="skills-detail">프론트엔드 산출물 인적정보 유효성 검사</p>
+                
+            </div>
+
+            <!-- 상세보기 화살표 -->
+            <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+        </div>
+
+        <div id="skills-box2" class="skills-box">
+
+            <!-- 아이콘 영역 -->
+            <img src="./custom/icon_coin.png" alt="계산기" class="skills-thumnail">
+
+            
+            <div class="skills-info">
+            
+                <p class="skills-title">계산기 사용자 화면</p>
+                <p class="skills-detail">프론트엔드 교육 과정 산출물로 사칙연산 구현</p>
+                
+            </div>
+
+            <!-- 상세보기 화살표 -->
+            <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+        </div>
+
+        <div id="skills-box3" class="skills-box">
+
+            <!-- 아이콘 영역 -->
+            <img src="./custom/icon_box.png" alt="박스" class="skills-thumnail">
+
+            
+            <div class="skills-info">
+            
+                <p class="skills-title">SALONE 두피 진단 플랫폼</p>
+                <p class="skills-detail">두피 데이터 활용한 서비스 아이디어톤 최우수상</p>
+                
+            </div>
+
+            <!-- 상세보기 화살표 -->
+            <img src="./custom/icon_rightarrow.svg" alt="바로가기 화살표" class="right-arrow">
+
+
+        </div>
+
+
+        <div class="gap"></div>
+        <div class="gap"></div>
+
+
+
+        <!-- 텍스트 영역 -->
+        <div id="tag-coworking" class="tag-coworking"><p id="content-tag" class="content-tag">CO-WORKING</p></div>
+        <p id="content-title" class="content-title">동료로 추천할만한 기획자</p>
+        <p id="content-detail" class="content-detail">
+            밀도 높은 소통으로
+            <br>
+            이해의 간극을 좁혀가고자 노력합니다
+        </p>
+
+
+        <div class="gap"></div>
+
+        <div class="content-alarm-wrap">
+            <img src="./custom/icon_alarm.png" alt="인포" class="icon_alarm">
+            <p class="content-alarm">리뷰를 클릭하면 전체 내용을 열람할 수 있습니다</p>
+        </div>
+
+
+
+        <div id="reference-wrap" class="reference-wrap">
+            <div id="reference-box1" class="reference-box">
+            </div>
+            <div id="reference-box2" class="reference-box">
+            </div>
+            <div id="reference-box3" class="reference-box">
+            </div>
+            <div id="reference-box3" class="reference-box">
+            </div>
+        </div>
+
+
+    
+    
+    </div>
+
+  </body>
+
+
+  <div class="footergap"></div>
+
+
+  <footer id="footer-wrap" class="footer-wrap">
+    <button class="btntype1" onclick="messageMail()">메일 문의하기</button>
+    <button class="btntype2" onclick="messageInterview()">면접 제안하기</button>
+
+  </footer>
+</html>
