@@ -20,6 +20,7 @@ function messageMail() {
   }
 
   function changeIconLikeOff() {
+    alert('찜하기가 해제되었습니다')
     const icon_like = document.getElementById('icon_like')
     const btnLike =document.getElementById('btnLike')
     icon_like.src ='./custom/icon_like_off.svg'
