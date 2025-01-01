@@ -101,9 +101,8 @@
     padding: 20px 16px;
     justify-content: space-between;
     align-items: center;
-    width: 343px;
+    width: 100%;
     height: 10px;
-    border: 1px solid #EEEEEE;
     position: fixed; /* 화면 상단에 고정 */
     top: 0; /* 상단에서의 거리 */
     background-color: #FFFFFF;
@@ -116,15 +115,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    width: 343px;
+    width: 100%;
     height: 50px;
-
-    border-left: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-    border-top: none; /* 상단 테두리 제거 */
-
-
     position: fixed;
     bottom: 0;
     background-color: #FFFFFF;
@@ -134,14 +126,13 @@
 
 
   .ATF {
-    width: 375px;
+    width: 100%;
     flex-direction: column;
     gap: 1.5vh;
-    border: 1px solid #EEEEEE;
   }
 
   .main * {
-    width: 375px;
+    width: 100%;
   }
 
   .section-wrap {
@@ -150,7 +141,7 @@
 
   .section-wrap > * {
     padding: 3px 16px 12px 16px;
-    width: 343px;
+    width: 100%;
   }
 
   .section-row1 * {
@@ -181,10 +172,9 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    width: 375px;
+    width: 100%;
     height: auto;
     background: linear-gradient(to bottom, #E6F5ED, #FFFFFF, #FFFFFF);
-    border: 1px solid #EEEEEE;
     overflow: hidden;
   }
 
