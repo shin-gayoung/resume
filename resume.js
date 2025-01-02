@@ -33,9 +33,25 @@ function messageMail() {
     alert('페이지 주소가 클립보드에 복사되었습니다');
     navigator.clipboard.writeText('https://shin-gayoung.github.io/resume/resume.html')
     setTimeout(changeIconShareOff, 2000); 
+
+    document.getElementById('btnShare').addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: '신가영 포트폴리오',
+          text: '테스트 해봄',
+          url: 'https://shin-gayoung.github.io/resume/resume.html'
+        })
+        .then(() => console.log('공유 성공'))
+        .catch((error) => console.error('공유 실패:', error));
+      } else {
+        alert('공유하기를 지원하지 않는 브라우저입니다.');
+      }
+    });
 }
 
   function changeIconShareOff() {
     const icon_like = document.getElementById('icon_share')
     icon_like.src ='./custom/icon_share_off.svg'
   }
+
+  
