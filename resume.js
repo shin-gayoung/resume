@@ -33,7 +33,7 @@ function messageMail() {
       if (navigator.share) {
         navigator.share({
           title: '신가영 포트폴리오',
-          text: '테스트 해봄',
+          text: '경력직PM 신가영 PORTFOLIO',
           url: 'https://shin-gayoung.github.io/resume/resume.html'
         })
         .then(() => console.log('공유 성공'))
