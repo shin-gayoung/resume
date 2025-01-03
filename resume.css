@@ -1,15 +1,15 @@
 
 /*모바일*/
 
- @font-face {
-      font-family: 'Pretendard';
-      src: url('fonts/Pretendard-Regular.woff2?v=1.0') format('woff2'),
-           url('fonts/Pretendard-Regular.woff') format('woff'),
-           url('fonts/Pretendard-Regular.ttf?v=1.0') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+@font-face {
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Regular.woff2?v=1.0') format('woff2'),
+       url('fonts/Pretendard-Regular.woff') format('woff'),
+       url('fonts/Pretendard-Regular.ttf?v=1.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
     padding: 0;
@@ -20,7 +20,8 @@
     font-weight: regular;
     display: flex;
   }
-   
+
+
   body {
     flex-direction: column;
     justify-content: center;
@@ -326,17 +327,19 @@
 
   .reference-wrap {
     flex-direction: row;
-    justify-content: left;
     gap: 6px;
-    overflow: visible;
+    width: 375px;
+    justify-content: left;
+    overflow-x: auto;
+    padding: 0px 16px 0px 0px;
   }
 
   .reference-box {
     flex-direction: column;
-    gap: 16px;
+    margin: 0px 16px 0px 0px ;
     padding: 16px;
     background-color: #F6F6F6;
-    height: 250px;
+    height: 230px;
     width: 240px;
   }
 
