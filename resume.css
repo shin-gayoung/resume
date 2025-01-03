@@ -1,17 +1,7 @@
 
 /*모바일*/
 
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Pretendard';
-    color: #222222;
-    font-size: 12px;
-    font-weight: regular;
-    display: flex;
-  }
-
-    @font-face {
+ @font-face {
       font-family: 'Pretendard';
       src: url('fonts/Pretendard-Regular.woff2?v=1.0') format('woff2'),
            url('fonts/Pretendard-Regular.woff') format('woff'),
@@ -21,6 +11,16 @@
       font-display: swap;
     }
 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Pretendard';
+    color: #222222;
+    font-size: 12px;
+    font-weight: regular;
+    display: flex;
+  }
+   
   body {
     flex-direction: column;
     justify-content: center;
