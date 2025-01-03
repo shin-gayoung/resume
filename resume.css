@@ -67,7 +67,8 @@
   p.interview-detail {color: #535353; line-height:160%; text-align: justify; width:238px; height:60px; overflow: hidden; text-overflow: ellipsis; 
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;}
+    -webkit-line-clamp: 3;
+  }
 
 
   .gap {
