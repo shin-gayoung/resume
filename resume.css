@@ -58,6 +58,17 @@
   p.skill-divider {color: #18A957; font-weight: bold;}
   p.skill-level {color: #18A957; font-weight: bold;}
 
+  p.personName {font-size: 13px;}
+  p.personInfo-positon {color: #535353; font-size: 13px;}
+  p.personInfo-divider {color: #535353; font-size: 13px;}
+  p.personInfo-relationship {color: #535353; font-size: 13px;}
+
+  p.interview-title {color: #535353; font-weight: bold; line-height:160%;}
+  p.interview-detail {color: #535353; line-height:160%; text-align: justify; width:238px; height:60px; overflow: hidden; text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;}
+
 
   .gap {
     height: 6px;
@@ -178,7 +189,7 @@
     width: 375px;
     height: auto;
     background: linear-gradient(to bottom, #E6F5ED, #FFFFFF, #FFFFFF);
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .career-box {
@@ -308,17 +319,43 @@
     justify-content: left;
     gap: 6px;
     overflow: visible;
-
   }
 
   .reference-box {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
     background-color: #F6F6F6;
-    height: 300px;
+    height: 250px;
     width: 270px;
   }
 
+  .emoji-thumnail {
+    height: 56px;
+    width: 56px;
+  }
 
 
+  .personal-info-wrap {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+
+  .personal-info-text-wrap {
+    flex-direction: column;
+  }
+
+  .personInfo {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+
+  .interview-wrap {
+    flex-direction: column;
+  }
 
 
 
