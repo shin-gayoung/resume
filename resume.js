@@ -28,11 +28,6 @@ function messageMail() {
   }
 
   function changeIconShareOn() {
-    const icon_like = document.getElementById('icon_share')
-    icon_like.src ='./custom/icon_share_on.svg'
-    alert('페이지 주소가 클립보드에 복사되었습니다');
-    navigator.clipboard.writeText('https://shin-gayoung.github.io/resume/resume.html')
-    setTimeout(changeIconShareOff, 2000); 
 
     document.getElementById('btnShare').addEventListener('click', () => {
       if (navigator.share) {
