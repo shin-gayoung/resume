@@ -11,6 +11,15 @@
     display: flex;
   }
 
+    @font-face {
+      font-family: 'Pretendard';
+      src: url('fonts/Pretendard-Regular.woff2?v=1.0') format('woff2'),
+           url('fonts/Pretendard-Regular.woff') format('woff'),
+           url('fonts/Pretendard-Regular.ttf?v=1.0') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 
   body {
     flex-direction: column;
