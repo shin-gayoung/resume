@@ -327,7 +327,7 @@
 
   .reference-wrap {
     flex-direction: row;
-    gap: 6px;
+    gap: 16px;
     width: 375px;
     justify-content: left;
     overflow-x: auto;
@@ -336,11 +336,19 @@
 
   .reference-box {
     flex-direction: column;
-    margin: 0px 16px 0px 0px ;
+    gap: 16px;
     padding: 16px;
     background-color: #F6F6F6;
     height: 230px;
     width: 240px;
+  }
+
+  #reference-box1 {
+    margin: 0px 0px 0px 32px ;
+  }
+
+  #reference-box4 {
+    margin: 0px 32px 0px 0px ;
   }
 
   .emoji-thumnail {
