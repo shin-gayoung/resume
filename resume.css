@@ -12,373 +12,354 @@
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Pretendard';
-    color: #222222;
-    font-size: 12px;
-    font-weight: regular;
-    display: flex;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Pretendard';
+  color: #222222;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+
+  user-select: none;     /* 텍스트 선택 방지 */
+  -webkit-user-drag: none; /* 이미지 드래그 방지 (크롬, 사파리 등) */
   }
 
+html {
+  justify-content: center;
+}
 
+body {
+ height: 100%;
+  width: 380px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
   body {
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  button {
-     background-color: #FFFFFF;
-     margin: none;
-     padding: none;
-     border: none;
-  }
+  } 
+}
 
 
-  p.header-title { font-size: 16px; }
-  p.atf-title { font-size: 18px; font-weight: medium; }
-  p.atf-subtitle { color: #535353; font-size: 14px; font-weight: regular; }
-  p.atf-nomalprice { color: #BDBDBD; font-size: 14px; font-weight: medium; text-decoration: line-through; }
-  p.atf-increase { color: #18A957; font-size: 20px; font-weight: bold; }
-  p.atf-price { font-size: 20px; font-weight: bold; }
+
+a {
+  padding: 12px 16px 12px 16px;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+}
+
+.logo {
+  height: 25px;
+}
+
+.app-logo {
+  height: 50px;
+  border:0.3px solid #AAAAAA;
+  border-radius: 18px;
+  margin: -16px;
+}
+
+.label-user {
+  color: #FFFFFF;
+  background-color: #5162FF;
+  padding: 6px 8px 6px 8px;
+  border-radius: 5px;
+}
+
+.label-admin {
+  color: #FFFFFF;
+  background-color: #4BA1F5;
+  padding: 6px 8px 6px 8px;
+  border-radius: 5px;
+}
+
+
+.btn {
+  width:100%;
+  padding: 16px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 300;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-type-1 {
+  border: 0.1px solid #AAAAAA;
+  background-color: #ffffff;
+  color: #4C4C4C;
+}
+
+#btn-type-2 {
+  border: 0.1px solid #5162FF;
+  background-color: #5162FF;
+  color: #ffffff;
+}
+
+
+
+
+
+/* 헤더 영역  */
+
+
+header {
+  background: linear-gradient(to bottom right, #5A44E2,#76b4f3);
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  justify-content: start;
+  align-items: stretch;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-wrap {
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content:space-between ;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
+}
+
+.header-wrap * {
+  border: #222222;
+}
+
+
+.search-wrap {
+  flex-direction: row;
+  height: auto;
+  justify-content:space-between ;
+  align-items: center;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 300px;
+  margin: 0px 16px 50px 16px;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: -16px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+
+/* 콘텐츠 영역 */
+
+
+.content-wrap {
+  background: #FFFFFF;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px 0px 82px 0px;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
   
-  p.content-tag { color: #EEEEEE; font-size: 13px; font-weight: medium; background-color: #222222; padding: 2px 6px;}
-  p.content-title { font-size: 24px; font-weight: bold; }
-  p.content-detail { font-size: 15px; font-weight: medium; text-align: center; line-height: 150%;}
-  p.content-guide { color: #535353; }
-  p.content-alarm { color: #9EA590; }
-
-  p.company-name { color: #18A957; font-weight: bold; }
-  p.company-divider { font-weight: bold; }
-  p.company-type { font-weight: bold; }
-
-  p.period-start {color: #757575; font-size: 11px;}
-  p.period-divider {color: #757575; font-size: 11px;}
-  p.period-end {color: #757575; font-size: 11px;}
-
-  p.project-name {color: #535353;}
-
-  p.skills-title {font-weight: bold;}
-  p.skills-detail {color: #757575; font-size: 11px;}
-
-  p.skill {color: #18A957; font-weight: bold;}
-  p.skill-divider {color: #18A957; font-weight: bold;}
-  p.skill-level {color: #18A957; font-weight: bold;}
-
-  p.personName {font-size: 13px;}
-  p.personInfo-positon {color: #535353; font-size: 13px;}
-  p.personInfo-divider {color: #535353; font-size: 13px;}
-  p.personInfo-relationship {color: #535353; font-size: 13px;}
-
-  p.interview-title {color: #535353; font-weight: bold; line-height:160%;}
-  p.interview-detail {color: #535353; line-height:160%; text-align: justify; width:238px; height:60px; overflow: hidden; text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-  }
+  position: relative;
+  margin-top: 136px;
+  z-index: 90;
+}
 
 
-  .gap {
-    height: 6px;
-  }
 
-  .headergap {
-    height: 50px;
-  }
+/* 공지 영역 */
 
-  .footergap {
-    height: 50px;
-  }
+.noti-wrap {
+  align-items: center;
+  background:#F7F8FB;
+  width: auto;
+  height: auto;
+  padding: 12px 16px 12px 16px;
+  margin: 0px 18px 0px 18px;
+  gap: 14px;
+  border-radius: 16px;
+}
 
-  .divider {
-    width: auto;
-    height: 1px;
-    background-color: #EEEEEE;
-  }
+.noti-tag {
+  background: #5162FF;
+  color: #FFFFFF;
+  padding: 6px 8px 6px 8px;
+  border-radius: 30px;
+}
 
-  .btntype1 {
-    border: 1px solid #DBDBDB;
-    height: 42px;
-    width: 50%;
-    background-color: #FFFFFF;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-  }
+.noti-text {
+  color: #4C4C4C;
+  font-size: 13.5px;
+  font-weight: 400;
+}
 
-  .btntype2 {
-    color: #EEEEEE;
-    border: 1px solid #DBDBDB;
-    height: 42px;
-    width: 50%;
-    background-color: #18A957;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-  }
 
-  
+/* 앱 마켓 영역 */
 
-  header.header-wrap {
-    padding: 20px 16px;
-    justify-content: space-between;
-    align-items: center;
-    width: 343px;
-    height: 10px;
-    position: fixed; /* 화면 상단에 고정 */
-    top: 0; /* 상단에서의 거리 */
-    background-color: #FFFFFF;
-  }
-  
+.appmarket-wrap {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0px 18px 0px 18px;
+  gap: 16px;
+}
 
-  footer.footer-wrap {
-    padding: 6px 16px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    width: 343px;
-    height: 50px;
+.app-wrap {
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-text {
+  color: #4C4C4C;
+  font-size: 12px;
+  margin: 8px 0px 0px 0px;
+}
+
+.tool-tip {
+  height: 25px;
+  margin: 0px 0px -12px 0px;
+  position: relative;   /* z-index 적용을 위한 필수 조건 */
+  z-index: 10;      
+}
+
+
+
+
+/* 프로젝트 설명 영역 */
+
+.project-wrap{
+  flex-direction: column;
+}
+
+.text-wrap {
+  flex-direction: column;
+  gap: 6px;
+  margin : 20px 18px 20px 18px;
+}
+
+.headcopy {
+  color: #1F1F1F;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.subcopy {
+  color: #4C4C4C;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#giftcard {
+  margin: 0px 16px 0px 18px; 
+}
+
+.projectcard-wrap {
+  flex-direction: row;
+  width: 100%;
+  overflow-x: auto;             /* 가로 스크롤 가능 */
+  overflow-y: hidden;           /* 세로 스크롤 차단 */
+  white-space: nowrap;
+  -ms-overflow-style: none;     /* IE/Edge용 스크롤바 숨김 */
+  scrollbar-width: none;        /* Firefox용 스크롤바 숨김 */
+}
+
+.projectcard-wrap::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari용 스크롤바 숨김 */
+}
+
+.project-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 184.2px;
+  height: 250px ;
+  margin-right: 16px;
+}
+
+.thumb {
+  height: 100%;
+  border-radius: 12px;
+}
+
+.cardtext-wrap {
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+}
+
+
+.card-headcopy {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-subcopy {
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+
+.card-timestamp {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.label-wrap {
+  flex-direction: row;
+  gap: 6px;
+}
+
+
+/* 푸터 영역 버튼 설정 */
+
+.footer-wrap {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 380px;
+  height: auto;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrap {
+    background-color: #ffffff;
     position: fixed;
     bottom: 0;
-    background-color: #FFFFFF;
-  }
-
-
-
-
-  .ATF {
-    width: 375px;
-    flex-direction: column;
-    gap: 1.5vh;
-  }
-
-  .main * {
-    width: 375px;
-  }
-
-  .section-wrap {
-    flex-direction: column;
-  }
-
-  .section-wrap > * {
-    padding: 3px 16px 12px 16px;
-    width: 343px;
-  }
-
-  .section-row1 * {
-    flex-direction: row;
-    height:20px;
-    gap: 6px;
-  }
-
-  .section-row1 {
-    justify-content: space-between;
-  }
-
-  .section-row2 {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .atf-result {
-    flex-direction: row;
-    gap: 6px;
-  }
-
-
-
-
-  .content {
-    padding: 40px 0px;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 375px;
+    z-index: 100;
+    width: 100%;
     height: auto;
-    background: linear-gradient(to bottom, #E6F5ED, #FFFFFF, #FFFFFF);
-    /* overflow: hidden; */
-  }
-
-  .career-box {
-    flex-direction: column;
-    background-color: #FFFFFF;
-    border-radius: 6px;
     padding: 16px;
-    margin: 10px 0px 5px 0px;
-    width: 280px;
-    gap: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
-
-  }
-
-  .career-info-row-1{
     justify-content: center;
     align-items: center;
-    width: auto;
-    gap: 12px;
+    gap: 8px;
   }
-
-  .career-info{
-    flex-direction: column;
-    width: 200px;
-    gap: 2px;
-  }
-
-  .brand-thumnail {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #EEEEEE;
-    border-radius: 5px;
-  }
-
-  .right-arros {
-    width: 20px;
-    height: 20px;
-  }
-
-  .company-info {
-    gap: 3px;
-  }
-
-  .period-info {
-    gap: 3px;
-  }
-
-
-  .project {
-    align-items: center;
-    gap: 3px;
-  }
-
-  .project-thumnail {
-    width: 20px;
-    height: 20px;
-  }
-
-
-  .career-info-row-2 {
-    justify-content: space-between;
-  }
-
-
-
-  .raidorchart {
-    width: 260px;
-  }
-
-
-
-
-  .skills-box {
-    align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 4px;
-    padding: 12px;
-    width: 280px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
-    gap: 6px;
-  }
-
-
-  .skills-thumnail {
-    width: 37px;
-    height: 37px;
-  }
-
-  .skills-info {
-    flex-direction: column;
-    width: 300px;
-    gap: 3px;
-  }
-
-
-
-  .tag-skill-wrap {
-    width: 220px;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .tag-skill {
-    background-color: #E4FBEE; 
-    border-radius: 2px; 
-    padding: 2px 4px;
-    gap: 3px;
-  }
-
-
-  .content-alarm-wrap {
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-  }
-
-  .icon_alarm {
-    width: 16px;
-    height: 16px;
-  }
-
-
-  .reference-wrap {
-    flex-direction: row;
-    gap: 16px;
-    width: 375px;
-    justify-content: left;
-    overflow-x: auto;
-    padding: 0px 16px 0px 0px;
-  }
-
-  .reference-box {
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-    background-color: #F6F6F6;
-    height: 230px;
-    width: 240px;
-  }
-
-  #reference-box1 {
-    margin: 0px 0px 0px 32px ;
-  }
-
-  #reference-box4 {
-    margin: 0px 32px 0px 0px ;
-  }
-
-  .emoji-thumnail {
-    height: 56px;
-    width: 56px;
-  }
-
-
-  .personal-info-wrap {
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
-  }
-
-
-  .personal-info-text-wrap {
-    flex-direction: column;
-  }
-
-  .personInfo {
-    flex-direction: row;
-    gap: 6px;
-  }
-
-
-  .interview-wrap {
-    flex-direction: column;
-  }
-
-
-
-
-
+}
