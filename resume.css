@@ -334,6 +334,116 @@ header {
 }
 
 
+/* 리뷰 타이틀 영역 */
+
+.review-wrap {
+  flex-direction: column;
+}
+
+.review-summary {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 18px 0px 18px;
+  gap: 8px;
+}
+
+.review-sum-text {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.view-all {
+  width: auto;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* 리뷰 카드 영역 */
+
+.reviewcard-wrap-wrap {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.reviewcard-wrap {
+  background-color: #F7F8FB;
+  flex-direction: column;
+  width: 350px;
+  padding: 16px 18px 16px 18px ;
+  border-radius: 8px;
+  gap: 4px;
+}
+
+.reviewcard-sum {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-radius: 3px;
+}
+
+.star-wrap {
+  flex-direction: row;
+  align-items: center;
+  gap: -2px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.reviewcard-label {
+  background-color: #E6E6E6;
+  color: #6D6D6D;
+  width: 45px;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.reviewcard-date {
+  color: #6F6F6F;
+  flex-grow: 1;
+  font-size: 11px;
+  font-weight: 200;
+  justify-content: right;
+}
+
+.reviewcard-content{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviewcard-text {
+  color: #6F6F6F;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;           /* 추가 필수 */
+  -webkit-box-orient: vertical;   
+  -webkit-line-clamp: 3;          /* 줄 수 설정 */
+  line-height: 1.4em;
+  max-height: calc(1.4em * 3);
+}
+
+.emoji {
+  width: 55px;
+  height: 55px;
+}
+
+
 /* 푸터 영역 버튼 설정 */
 
 .footer-wrap {
@@ -363,3 +473,4 @@ header {
     gap: 8px;
   }
 }
+
