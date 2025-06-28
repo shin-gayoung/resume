@@ -371,7 +371,18 @@ header {
 .reviewcard-wrap-wrap {
   flex-direction: row;
   gap: 10px;
+  width: 100%;
+  overflow-x: auto;             /* 가로 스크롤 가능 */
+  overflow-y: hidden;           /* 세로 스크롤 차단 */
+  white-space: nowrap;
+  -ms-overflow-style: none;     /* IE/Edge용 스크롤바 숨김 */
+  scrollbar-width: none;        /* Firefox용 스크롤바 숨김 */
 }
+
+.reviewcard-wrap-wrap::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari용 스크롤바 숨김 */
+}
+
 
 .reviewcard-wrap {
   background-color: #F7F8FB;
@@ -436,6 +447,8 @@ header {
   -webkit-line-clamp: 3;          /* 줄 수 설정 */
   line-height: 1.4em;
   max-height: calc(1.4em * 3);
+  word-break: hidden;
+  white-space: normal;
 }
 
 .emoji {
