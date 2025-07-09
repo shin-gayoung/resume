@@ -51,8 +51,11 @@ body {
 
 
 
-a {
-  padding: 12px 16px 12px 16px;
+button#mypage, button#btnShare, button#search, a.app-logo {
+  padding: 16px;
+  margin: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .icon {
@@ -64,7 +67,7 @@ a {
   height: 25px;
 }
 
-.app-logo {
+img.app-logo {
   height: 50px;
   border:0.3px solid #AAAAAA;
   border-radius: 18px;
@@ -153,6 +156,7 @@ header {
   background-color: rgba(255,255,255,0.2);
   border-radius: 300px;
   margin: 0px 16px 50px 16px;
+  gap: 16px;
 }
 
 .placeholder {
@@ -180,7 +184,7 @@ header {
   gap: 16px;
   
   position: relative;
-  margin-top: 136px;
+  margin-top: 160px;
   z-index: 90;
 }
 
@@ -351,9 +355,9 @@ header {
 .review-sum-text {
   flex-grow: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .view-all {
@@ -362,7 +366,8 @@ header {
   justify-content: right;
   align-items: center;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 
@@ -486,4 +491,3 @@ header {
     gap: 8px;
   }
 }
-
