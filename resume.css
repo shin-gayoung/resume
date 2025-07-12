@@ -388,6 +388,9 @@ header {
   display: none;                /* Chrome/Safari용 스크롤바 숨김 */
 }
 
+#reviewcard-wrap-01 {
+  margin-left: 18px;
+}
 
 .reviewcard-wrap {
   background-color: #F7F8FB;
@@ -455,6 +458,8 @@ header {
   word-break: hidden;
   white-space: normal;
 }
+
+
 
 .emoji {
   width: 55px;
