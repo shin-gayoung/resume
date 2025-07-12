@@ -27,6 +27,10 @@
   -webkit-user-drag: none; /* 이미지 드래그 방지 (크롬, 사파리 등) */
   }
 
+html {
+  justify-content: center;
+}
+
 .icon {
   height: 25px;
   width: 25px;
@@ -190,10 +194,12 @@ a#view-all {
 /* 홍보자료 영역 */
 
 .mkt-wrap {
+  box-sizing: border-box;
   border: 1px, solid, #EAEAEA;
   border-radius: 10px;
   padding: 12px;
   margin: 0px 18px 0px 18px;
+  width: calc(100% - 36px); /* 좌우 margin 고려 */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -226,13 +232,31 @@ a#view-all {
   padding: 3px 4px 3px 4px;
 }
 
+.mkt-card-wrap {
+  flex-direction: row;
+  width: 100%;
+  overflow-x: auto;             /* 가로 스크롤 가능 */
+  overflow-y: hidden;           /* 세로 스크롤 차단 */
+  white-space: nowrap;
+  -ms-overflow-style: none;     /* IE/Edge용 스크롤바 숨김 */
+  scrollbar-width: none;        /* Firefox용 스크롤바 숨김 */
+  gap: 12px;
+}
+
+.mkt-card-wrap::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari용 스크롤바 숨김 */
+}
+
+
 .mkt-card {
-  flex-direction: column;
-  gap: 6px;
+  flex: 0 0 auto;              /* 줄바꿈 없이 고정 너비로 설정 */
+  width: 60%;
   background-color: #F7F8FB;
   border-radius: 8px;
   padding: 12px;
-  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .mkt-card-header {
@@ -242,6 +266,7 @@ a#view-all {
 
 .mkt-card-content {
   flex-direction: row;
+  gap: 6px;
 }
 
 .mkt-card-desc {
@@ -256,10 +281,13 @@ a#view-all {
   max-height: calc(1.4em * 3);
   word-break: hidden;
   white-space: normal;
+
+  width: 100%;
 }
 
 .mkt-card-img {
-  width: 55%;
+  width: calc(1.8em * 3);
   background-color: #FFFFFF;
   border: none;
+  border-radius: 8px;
 }
