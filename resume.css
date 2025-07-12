@@ -423,10 +423,10 @@ header {
 .reviewcard-label {
   background-color: #E6E6E6;
   color: #6D6D6D;
-  width: 45px;
+  width: auto;
   font-size: 10px;
   font-weight: 400;
-  padding: 3px;
+  padding: 3px 5px 3px 5px;
   border-radius: 4px;
 }
 

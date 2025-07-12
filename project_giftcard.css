@@ -247,6 +247,9 @@ a#view-all {
   display: none;                /* Chrome/Safari용 스크롤바 숨김 */
 }
 
+.mkt-card-wrap *{
+  text-decoration: none;
+}
 
 .mkt-card {
   flex: 0 0 auto;              /* 줄바꿈 없이 고정 너비로 설정 */
@@ -262,6 +265,8 @@ a#view-all {
 .mkt-card-header {
   flex-direction: row;
   gap: 5px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mkt-card-content {
@@ -286,7 +291,7 @@ a#view-all {
 }
 
 .mkt-card-img {
-  width: calc(1.8em * 3);
+  width: calc(1.4em * 3);
   background-color: #FFFFFF;
   border: none;
   border-radius: 8px;
