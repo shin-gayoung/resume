@@ -72,3 +72,38 @@ function historyBack() {
   history.back();
 });
 }
+
+
+function chipOnClick() {
+
+const allChips = document.querySelectorAll('.chip-wrap button');
+
+allChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    // chip-active 상태인 경우 클릭 무시
+    if (chip.classList.contains('chip-active')) return;
+
+    // 모든 칩에서 chip-active 제거하고 chip 클래스만 남김
+    allChips.forEach(c => {
+      c.classList.remove('chip-active');
+      c.classList.add('chip');
+    });
+
+    // 클릭한 칩에 chip-active 추가, chip 제거
+    chip.classList.add('chip-active');
+    chip.classList.remove('chip');
+  });
+});
+
+}
+
+
+
+function ready() {
+  alert('준비중입니다. 빠르게 업데이트 할 수 있도록 할게요 :)')
+}
+
+function offerLetter() {
+    alert('메일 주소가 클립보드에 복사되었습니다. (rkdud12547@gmail.com) 본 메일로 문의 부탁드립니다. :)')
+    navigator.clipboard.writeText('rkdud12547@gmail.com')
+  }
