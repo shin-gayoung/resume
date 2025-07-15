@@ -28,10 +28,10 @@
 
         <!-- 검색창 영역 -->
         <div class="search-wrap">
-            <button class="search" id="search">
+            <button class="search" id="search" onclick="ready()">
               <img class="icon" src="./custom/icon_search.svg" class="icon" id="search">
             </button>
-            <a class="placeholder" id="search-placeholder">
+            <a class="placeholder" id="search-placeholder" onclick="ready()">
               지원자에게 질문을 남겨 보세요
             </a>
         </div>
@@ -113,8 +113,8 @@
               
               <div class="cardtext-wrap" >
                 <div class="card-headcopy">모바일 상품권</div>
-                <!-- <div class="card-subcopy">상대의 고유한 취향을 존중하는 기프트</div> -->
-                <div class="card-timestamp">2025.07 오픈 예정</div>
+                <div class="card-subcopy">상대의 고유한 취향을 존중하는 기프트</div>
+                <div class="card-timestamp">2025.07 오픈</div>
                 <div class="label-wrap">
                   <div class="label-user">사용자</div>
                   <div class="label-admin">관리자</div>
@@ -123,12 +123,12 @@
 
             </a>
 
-            <a class="project-card">
+            <a class="project-card" id="realty" href="./project_realty.html">
               <img class="thumb" src="./custom/thumb_realty.jpg">
               
               <div class="cardtext-wrap">
                 <div class="card-headcopy">수익형 부동산</div>
-                <!-- <div class="card-subcopy">예상 임대 수익 및 시세 차익 정보</div> -->
+                <div class="card-subcopy">예상 임대 수익 및 시세 차익 정보</div>
                 <div class="card-timestamp">2024.09 오픈</div>
                 <div class="label-wrap">
                   <div class="label-user">사용자</div>
@@ -138,12 +138,12 @@
 
             </a>
 
-            <a class="project-card">
+            <a class="project-card" id="feature-flag" href="./project_featureflag.html">
               <img class="thumb" src="./custom/thumb_featureflag.jpg">
               
               <div class="cardtext-wrap">
                 <div class="card-headcopy">피처 플래그 개발기</div>
-                <!-- <div class="card-subcopy">실시간 데이터 동기화를 향한 여정</div> -->
+                <div class="card-subcopy">실시간 데이터 동기화를 향한 여정</div>
                 <div class="card-timestamp">2025.02 오픈</div>
                 <div class="label-wrap">
                   <div class="label-user">기술 블로그</div>

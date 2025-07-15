@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="global-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="./project.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+  </head>
+
+<body>
+  <header>
+    <button onclick="historyBack()" id="backBtn"><img class="icon" id="icon_back" src="./custom/icon_back.jpg"></button>
+    
+    <div class="headcopy">프로젝트 상세</div>
+
+    <div class="button-wrap">
+      <!-- <button><img class="icon" id="icon_alarm" src="./custom/icon_alarm.jpg"></button> -->
+      <!-- <a href="./resume.html"><img class="icon" id="icon_main" src="./custom/icon_main.jpg"></a> -->
+      <button onclick="changeIconShareOnGiftcard()" id="btnShare_giftcard"><img class="icon" id="icon_share" src="./custom/icon_share.jpg"></button>
+    </div>
+  </header>
+
+  <div class="ATF-wrap">
+    <div class="thumb">
+      <img class="hero" src="./custom/hero_realty.jpg">
+    </div>
+
+    <div class="sum">
+      <div class="project-text-wrap">
+        <div class="project-name">수익형 부동산</div>
+        <div class="project-date">2024.09 오픈</div>
+      </div>
+      <div class="project-desc">상가 · 사무실 예상 임대 수익 및 시세 차익 정보</div>
+      
+      <!-- <div class="ATF-button-wrap">
+        <button><img class="icon" id="icon_heart"src="./custom/icon_like.jpg"></button>
+        <button><img class="icon" id="icon_share" src="./custom/icon_share.jpg"></button>
+      </div> -->
+      <div class="label-wrap">
+        <div class="label">상위기획 30%</div>
+        <div class="label">사용자 30%</div>
+        <!-- <div class="label">관리자 90%</div>
+        <div class="label">운영 50%</div> -->
+      </div>
+    </div>
+
+    <!-- <div class="mkt-wrap">
+      <div class="mkt-header">
+        <img class="mini-icon" src="./custom/icon_doc.jpg">
+        <div class="mkt-headcopy">홍보 자료 참고</div>
+        <a id="view-all" onclick="ready()">전체보기<img class="mini-icon" src="./custom/icon_arrow_right.jpg"></a>
+      </div>
+
+      <div class="mkt-card-wrap">
+
+        <a class="mkt-card" href="https://www.fnnews.com/news/202507011344063539">
+          <div class="mkt-card-header">
+            <div class="mkt-label">보도자료</div>
+            <div class="mkt-date">2025.07.01</div>
+          </div>
+          <div class="mkt-card-content">
+            <div class="mkt-card-desc">러쉬코리아가 공식 앱 전용 모바일 상품권 및 기프트 카드 서비스를 출시했다고 1일 밝혔다. 모바일 상품권을 구매하거나 선물 받은 고객이 앱에 기프트 카드를 등록하면 해당 금액이 자동으로 충전된다. 러쉬 공식 앱 및 웹에서 구매할 수 있다.</div>
+            <img class="mkt-card-img" src="./custom/mini_thumb_giftcard.jpg">
+          </div>
+        </a>
+
+        <a class="mkt-card" href="https://m.blog.naver.com/lushkr1/223916863468">
+          <div class="mkt-card-header">
+            <div class="mkt-label">블로그</div>
+            <div class="mkt-date">2025.07.01</div>
+          </div>
+          <div class="mkt-card-content">
+            <div class="mkt-card-desc">🎁러쉬 매장에서 30분째 헤매고 있다면 - 러쉬 모바일 상품권 오픈 러쉬에서 만나보실 수 있는 제품들의 가짓수입니다. *자사몰 기준 100개도 아닌 무려 1000개! 이중에서 나의 취향에 딱 맞는 제품을 찾는다는 건 정말 어려운 일이죠. 특히 남을 위한 선물이라면 더더욱이요.</div>
+            <img class="mkt-card-img" src="./custom/mini_thumb_giftcard2.jpg">
+          </div>
+        </a>
+
+      </div>
+      
+    </div> -->
+
+    
+
+
+  </div>
+
+
+  <div class="content-wrap">
+    <div class="task-title">서비스 목적 : 부동산 투자 유저 확보</div>
+    <div class="task-desc">
+      네모는 상업용 부동산(상가 · 사무실) 직접 사용을 목표로 하는 ‘임대차’  전문으로 다루는 플랫폼이었습니다. (자영업 가게 · 점포, 사업용 사무실 등) 
+      <br>이후 상업용 부동산을 실사용이 아닌 ‘투자’ 목적으로 탐색하는 유저까지 흡수할 수 있도록 ‘수익형 부동산’ 게이트를 신설하게 되었습니다. 수익형 부동산 탭에서는 임대수익·시세차익 두 가지 관점으로 수익형 부동산 정보를 한눈에 모아볼 수 있습니다.
+    </div>
+
+    <div class="task-title">건물 단위 설계 : 입주 현황</div>
+    <div class="task-desc">
+      관심 매물이 있는 건물의 입주 현황 또한 유의미 합니다. 건물에 입점해 있는 상가 또는 사무실의 구성에 따라서 매도 목적으로 나온 매물의 가치가 달라지기 때문입니다. 이에 소상공인 공공 데이터를 연동하여 입주현황 정보를 자동 로드할 수 있도록 구현했습니다.
+    </div>
+
+    <img class="task-img" src="./custom/content_realty_01.jpg">
+
+
+    <div class="task-title">매물 단위 설계 : 수익 계산</div>
+    <div class="task-desc">
+      투자 목적으로 부동산을 탐색하는 유저가 매물을 들여다 볼 때는  ‘높은 수익률’을 보장할 수 있는가를 가장 궁금해 합니다. 이 때 매매가, 연 임대수익, 대출을 기준으로 가계산을 해보게 됩니다. 이런 수기 계산의 수고로움을 덜어 주고자 수익률 계산기를 기획했습니다. 
+      <br>기본적으로는 매도인이 입력한 매물 정보를 토대로 계산하고 2차로는 탐색자가 직접 각 금액을 수정하여 직접 시뮬레이션 해 볼 수 있도록 구성했습니다.
+    </div>
+
+    <img class="task-img" src="./custom/content_realty_02.jpg">
+
+    <div class="task-title">매물 단위 설계 : 비용 계산</div>
+    <div class="task-desc">
+      투자 목적으로 부동산을 거래할 경우 발생할 수 있는 비용이 기본적으로 두 가지가 있습니다. 첫 번째는 거래할 때 발생할 수 있는 중개 보수(중개 수수료)고, 두 번째는 부동산(재산)에 대한 취득세입니다. 매도인이 등록한 매매가를 기준으로 자동 계산하여 매수인이 대략적으로 비용을 가늠해 볼 수 있도록 정보를 제공했습니다.
+    </div>
+
+    <img class="task-img" src="./custom/content_realty_03.jpg">
+
+
+
+
+
+  </div>
+
+  <div class="task-group">
+    <div class="chip-wrap">
+      <button class="chip-active" data-target="task-group-1" onclick="chipOnClick(this)" id="chip-first">데이터 연동</button>
+      <button class="chip" data-target="task-group-2" onclick="chipOnClick(this)" id="chip-02">수익 · 비용 계산</button>
+      <button class="chip" data-target="task-group-3" onclick="chipOnClick(this)" id="chip-last">법무 검토</button>
+    </div>
+
+    <div class="task-group-1">
+      <div class="task-text">
+        <div class="task-text-title-wrap">
+          <div class="task-title">데이터 연동</div>
+          <div class="mkt-label">30% 기여</div>
+        </div>
+        <div class="task-desc">내용을 입력하는 공간입니다. 최대한 간결하게 작성해 주세요.</div>
+      </div>
+
+      <div class="menu-wrap">
+        <button class="menu" id="law-01" onclick="ready()">
+          <div class="label">건물 정보</div>
+          <div class="menu-text">건축물대장 오픈 데이터 연동</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-02" onclick="ready()">
+          <div class="label">임대차 현황</div>
+          <div class="menu-text">소상공인 공공 데이터 연동</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-03" onclick="ready()">
+          <div class="label">주변 시설</div>
+          <div class="menu-text">지도 기반 500m 이내 정보 연동</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-04" onclick="ready()">
+          <div class="label">투자 정보</div>
+          <div class="menu-text">교통 · 인프라 · 개발 호재 연동 검토</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-05" onclick="ready()">
+          <div class="label">규제 정보</div>
+          <div class="menu-text">LTV 등 규제 정보 연동 검토</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+      </div>
+    </div>
+
+
+    <div class="task-group-2" style="display: none;">
+      <div class="task-text">
+        <div class="task-text-title-wrap">
+          <div class="task-title">수익 · 비용 계산</div>
+          <div class="mkt-label">30% 기여</div>
+        </div>
+        <div class="task-desc">내용을 입력하는 공간입니다. 최대한 간결하게 작성해 주세요.</div>
+      </div>
+
+      <div class="menu-wrap">
+        <button class="menu" id="law-01" onclick="ready()">
+          <div class="label">수익률</div>
+          <div class="menu-text">수익률 · 적정 매매가 가계산</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-02" onclick="ready()">
+          <div class="label">중개 보수</div>
+          <div class="menu-text">상한 요율 기준 중개 보수 가계산</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-03" onclick="ready()">
+          <div class="label">중개 보수</div>
+          <div class="menu-text">권리금 중개 수수료 검토</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-04" onclick="ready()">
+          <div class="label">세금</div>
+          <div class="menu-text">취득세 · 인지세 가계산</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+      </div>
+    </div>
+
+
+
+    <div class="task-group-3" style="display: none;">
+      <div class="task-text">
+        <div class="task-text-title-wrap">
+          <div class="task-title">부동산 유형에 따른 정보 제공</div>
+          <div class="mkt-label">30% 기여</div>
+        </div>
+        <div class="task-desc">#현금영수증 의무 발행 #인지세 #솔루션 정산 상세 운영 가이드 수립</div>
+      </div>
+
+      <div class="menu-wrap">
+        <button class="menu" id="law-01" onclick="ready()">
+          <div class="label">주택법</div>
+          <div class="menu-text">구분 소유 여부에 따라 화면 분기</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+        <button class="menu" id="law-02" onclick="ready()">
+          <div class="label">표시 · 광고법</div>
+          <div class="menu-text">부동산 유형별 필수 표기 정보 노출</div>
+          <img class="icon" src="./custom/icon_arrow_right.jpg">
+        </button>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="note-wrap">
+    <div class="note-title">유의 사항</div>
+    <div class="note-detail">본 문서에 포함된 모든 내용은 입사 지원에 참고 자료로 사용되기 위해 작성된 것이며, 민감한 대외비 내용이 포함되어 있을 수 있습니다. 
+    <br>
+      이에 제3자에게 본 자료를 공개·복사·배포할 수 없으며, 다른 목적으로도 활용할 수 없다는 전제 하에 귀사(귀하)에게 제공됩니다. 정보 유출 시 발생할 수 있는 모든 일에 대한 책임은 귀사(귀하)에 있습니다.</div>
+  </div>
+
+</body>
+
+<footer id="footer-wrap" class="footer-wrap">
+  <!-- <button class="btn" id="btn-type-1">오퍼레터 발송</button> -->
+  <a class="btn" id="btn-type-2" href="https://www.nemoapp.kr/invest">서비스 페이지 방문</a>
+</footer>
+
+
+  <script src="./resume.js"></script>
+</html>

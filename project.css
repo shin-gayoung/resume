@@ -1,0 +1,532 @@
+
+/*모바일*/
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Regular.woff2?v=1.0') format('woff2'),
+       url('fonts/Pretendard-Regular.woff') format('woff'),
+       url('fonts/Pretendard-Regular.ttf?v=1.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Pretendard';
+  color: #222222;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+
+  user-select: none;     /* 텍스트 선택 방지 */
+  -webkit-user-drag: none; /* 이미지 드래그 방지 (크롬, 사파리 등) */
+  }
+
+html {
+  justify-content: center;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+}
+
+.mini-icon{
+  height: 20px;
+  width: 20px;
+}
+
+button, a {
+  padding: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  height: 100%;
+  width: 380px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+}
+
+
+
+/* 헤더 영역 */
+
+
+header {
+  flex-direction: row;
+  height: auto;
+  width: 380px;
+  justify-content:space-between ;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content:space-between ;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #FFFFFF;
+  }
+}
+
+
+.headcopy {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  color: #4C4C4C;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+
+
+.button-wrap { 
+  flex-direction: row;
+  gap: -60px;
+}
+
+#icon_alarm {
+  margin: 0px -8px 0px 0px ;
+}
+
+#icon_main {
+  margin: 0px 0px 0px -8px ;
+}
+
+a#view-all {
+  padding: 0px;
+}
+
+
+
+/* ATF 영역 */
+
+
+.ATF-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 56px;
+}
+
+.hero {
+    width: 100%;
+}
+
+.sum {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    padding : 20px 18px 20px 18px;
+    gap: 8px;
+}
+
+
+.ATF-button-wrap {
+    flex-direction: row;
+    gap: 6px;
+}
+
+
+/* 프로젝트 기본 설명 */
+
+.project-text-wrap{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-name {
+    color: #1F1F1F;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.project-date {
+    color: #7C7C7C;
+    font-size: 11px;
+    font-weight: 300;
+
+
+}
+
+.project-desc {
+    color: #4C4C4C;
+    font-size: 13px;
+    font-weight: 400;
+
+}
+
+
+/* 라벨 영역 */
+
+.label-wrap {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 6px;
+}
+
+.label {
+  border:2px, solid, #B2BAFF ;
+  border-radius: 4px;
+  background-color: #F5F6FF;
+  padding: 5px 6px 5px 6px;
+  color: #4154FF;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* 홍보자료 영역 */
+
+.mkt-wrap {
+  box-sizing: border-box;
+  border: 1px, solid, #EAEAEA;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 0px 18px 0px 18px;
+  width: calc(100% - 36px); /* 좌우 margin 고려 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.mkt-header {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.mkt-header * {
+  align-items: center;
+}
+
+.mkt-headcopy {
+  flex-grow: 1;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mkt-label {
+  border-radius: 3px;
+  background-color: #E6E6E6;
+  color: #6D6D6D;
+  padding: 3px 4px 3px 4px;
+}
+
+.mkt-card-wrap {
+  flex-direction: row;
+  width: 100%;
+  overflow-x: auto;             /* 가로 스크롤 가능 */
+  overflow-y: hidden;           /* 세로 스크롤 차단 */
+  white-space: nowrap;
+  -ms-overflow-style: none;     /* IE/Edge용 스크롤바 숨김 */
+  scrollbar-width: none;        /* Firefox용 스크롤바 숨김 */
+  gap: 12px;
+}
+
+.mkt-card-wrap::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari용 스크롤바 숨김 */
+}
+
+.mkt-card-wrap *{
+  text-decoration: none;
+}
+
+.mkt-card {
+  flex: 0 0 auto;              /* 줄바꿈 없이 고정 너비로 설정 */
+  width: 70%;
+  background-color: #F7F8FB;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mkt-card-header {
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mkt-card-content {
+  flex-direction: row;
+  gap: 6px;
+}
+
+.mkt-card-desc {
+  color: #6F6F6F;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;           /* 추가 필수 */
+  -webkit-box-orient: vertical;   
+  -webkit-line-clamp: 3;          /* 줄 수 설정 */
+  line-height: 1.4em;
+  max-height: calc(1.4em * 3);
+  word-break: hidden;
+  white-space: normal;
+
+  width: 100%;
+}
+
+.mkt-card-img {
+  width: calc(1.4em * 3);
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+}
+
+
+
+/* 콘텐츠 스타일 지정 */
+
+.content-wrap {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 36px 18px 18px 18px;
+  gap: 10px;
+}
+
+.task-img {
+  width: 100%;
+  padding-bottom: 18px;
+}
+
+
+/* 칩 스타일 지정 */
+
+.task-group {
+  width: 100%;
+  flex-direction: column;
+}
+
+.chip-wrap {
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  overflow-x: auto;             /* 가로 스크롤 가능 */
+  overflow-y: hidden;           /* 세로 스크롤 차단 */
+  white-space: nowrap;
+  -ms-overflow-style: none;     /* IE/Edge용 스크롤바 숨김 */
+  scrollbar-width: none;        /* Firefox용 스크롤바 숨김 */
+}
+
+.chip-wrap::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari용 스크롤바 숨김 */
+}
+
+button#chip-first {
+  margin-left: 18px;
+}
+
+button#chip-last {
+  margin-right: 18px;
+}
+
+.chip-active {
+  color: #FFFFFF;
+  font-weight: 300;
+  background-color: #222222;
+  border-radius: 30px;
+  width: auto;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 12px 0px 12px;
+}
+
+.chip {
+  
+  font-weight: 300;
+  border: 1px solid #EEEEEE;
+  border-radius: 30px;
+  width: auto;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 12px 0px 12px;
+}
+
+
+/* 메뉴 스타일 지정 */
+
+.task-group-1, .task-group-2, .task-group-3, .task-group-4,.task-group-5 {
+  display: flex;  
+  flex-direction: column;
+  padding: 12px 18px 50px 18px;
+}
+
+.task-text {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-text-title-wrap {
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.task-desc {
+  font-weight: 300;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+
+.menu-wrap {
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #EEEEEE;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menu {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 12px 16px;
+}
+
+.menu-text {
+  flex-grow: 1;
+}
+
+
+/* 유의 사항 영역 */
+
+.note-wrap {
+  background-color: #F7F8FB ;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  padding: 18px 18px 100px 18px;
+  gap: 8px;
+}
+
+.note-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.note-detail {
+  font-size: 11px;
+  font-weight: 300;
+  color: #757575;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+/* 푸터 영역 버튼 설정 */
+
+.footer-wrap {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 380px;
+  height: auto;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrap {
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.btn {
+  width:100%;
+  padding: 16px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 300;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-type-1 {
+  border: 0.1px solid #AAAAAA;
+  background-color: #ffffff;
+  color: #4C4C4C;
+}
+
+#btn-type-2 {
+  border: 0.1px solid #5162FF;
+  background-color: #5162FF;
+  color: #ffffff;
+  text-decoration: none;
+}

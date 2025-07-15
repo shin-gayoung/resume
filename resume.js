@@ -74,29 +74,35 @@ function historyBack() {
 }
 
 
-function chipOnClick() {
+function chipOnClick(clickedChip) {
+  const allChips = document.querySelectorAll('.chip-wrap button');
+  const allTaskGroups = document.querySelectorAll('[class^="task-group-"]');
 
-const allChips = document.querySelectorAll('.chip-wrap button');
+  // 클릭한 칩이 이미 active 상태라면 무시
+  if (clickedChip.classList.contains('chip-active')) return;
 
-allChips.forEach(chip => {
-  chip.addEventListener('click', () => {
-    // chip-active 상태인 경우 클릭 무시
-    if (chip.classList.contains('chip-active')) return;
-
-    // 모든 칩에서 chip-active 제거하고 chip 클래스만 남김
-    allChips.forEach(c => {
-      c.classList.remove('chip-active');
-      c.classList.add('chip');
-    });
-
-    // 클릭한 칩에 chip-active 추가, chip 제거
-    chip.classList.add('chip-active');
-    chip.classList.remove('chip');
+  // 칩 상태 초기화
+  allChips.forEach(chip => {
+    chip.classList.remove('chip-active');
+    chip.classList.add('chip');
   });
-});
 
+  // 클릭된 칩 활성화
+  clickedChip.classList.add('chip-active');
+  clickedChip.classList.remove('chip');
+
+  // 모든 task-group 숨기기
+  allTaskGroups.forEach(group => {
+    group.style.display = 'none';
+  });
+
+  // 해당하는 task-group 보이기
+  const targetClass = clickedChip.getAttribute('data-target');
+  const targetGroup = document.querySelector(`.${targetClass}`);
+  if (targetGroup) {
+    targetGroup.style.display = 'block';
+  }
 }
-
 
 
 function ready() {

@@ -30,29 +30,29 @@
 
   <div class="ATF-wrap">
     <div class="thumb">
-      <img class="hero" src="./custom/hero_giftcard.jpg">
+      <img class="hero" src="./custom/hero_featureflag.jpg">
     </div>
 
     <div class="sum">
       <div class="project-text-wrap">
-        <div class="project-name">모바일 상품권</div>
-        <div class="project-date">2025.07.01 오픈</div>
+        <div class="project-name">피처 플래그 개발기</div>
+        <div class="project-date">2025.02.11 오픈</div>
       </div>
-      <div class="project-desc">상대방의 취향을 존중하는 기프트</div>
+      <div class="project-desc">실시간 데이터 동기화를 향한 여정</div>
       
       <!-- <div class="ATF-button-wrap">
         <button><img class="icon" id="icon_heart"src="./custom/icon_like.jpg"></button>
         <button><img class="icon" id="icon_share" src="./custom/icon_share.jpg"></button>
       </div> -->
       <div class="label-wrap">
-        <div class="label">상위기획 85%</div>
-        <div class="label">사용자 50%</div>
+        <div class="label">이미지제작 100%</div>
+        <!-- <div class="label">사용자 50%</div>
         <div class="label">관리자 90%</div>
-        <div class="label">운영 50%</div>
+        <div class="label">운영 50%</div> -->
       </div>
     </div>
 
-    <div class="mkt-wrap">
+    <!-- <div class="mkt-wrap">
       <div class="mkt-header">
         <img class="mini-icon" src="./custom/icon_doc.jpg">
         <div class="mkt-headcopy">홍보 자료 참고</div>
@@ -85,7 +85,7 @@
 
       </div>
       
-    </div>
+    </div> -->
 
     
 
@@ -94,43 +94,39 @@
 
 
   <div class="content-wrap">
-    <div class="task-title">서비스 목적 : 개성 · 취향 존중</div>
+    <div class="task-title">목표 설정 : 실시간 동기화</div>
     <div class="task-desc">
-      러쉬는 다양성을 존중하고 모두의 개성과 취향을 소중히 여깁니다. 선물 받은 사람이 원하는 제품을 직접 선택할 수 있도록 러쉬는 상품권 서비스를 제공하며 선물에 대한 고민 없이도 진심을 전할 수 있는 특별한 경험을 선사합니다.
-      <br>
-      <br> 상품권 서비스로 기대할 수 있는 자사 앱의 베네핏은 다음과 같습니다.
-      <br>① 신규 회원 유치 : 금액 사용을 위해 회원가입하도록 유도
-      <br>② 선물하기 활성화 : 선물 고민으로 인한 이탈 완화
-      <br>③ 연계 매출 기대 : 상품권 금액을 초과하는 부분의 추가 결제 유도
+      카카오페이 데이터서비스팀에서는 두 서버 간의 실시간 데이터 동기화에 대해 고민하고 해결한 바 있습니다. 이 과정에 참여한 담당 개발자님이 기술 블로그에 해당 경험을 소개하기로 했으며 저는 콘텐츠 이미지 작업을 요청 받아 수행하게되었습니다. 
+      <br>기술 블로그 콘텐츠의 고질적인 단점이 있다면 읽어야 할 텍스트와 코드의 양이 어쩔 수 없이 방대하다는 점이었습니다. 이 때문에 개발자님도 투고 전까지 최대한 내용을 간결하고 이해하기 쉽게 서술하고자 거듭 수정을 반복했습니다.여기서 제 역할은 텍스트보다 이미지로 먼저 직관적인 이해를 도울 수 있도록 도식 작업을 하는 것이었습니다. 도식화한 주요 내용을 요약하자면 다음과 같습니다.
+      <br>신규 기능 수행 중 ON 상태에서 OFF 상태로 변경되는 것이 실시간으로 이뤄지지 않으면 에러가 발생할 수 있으며 이 때 최신의 ON/OFF 상태를 포함한 다양한 설정 정보가 실시간으로 사용자에 반영될 수 있도록 설계한 내용입니다.
     </div>
 
-    <img class="task-img" src="./custom/content_giftcard_01.jpg">
+    <img class="task-img" src="./custom/content_featureflag_01.jpg">
 
 
-    <div class="task-title">차별화 전략  : 스킨 콜렉팅</div>
+    <div class="task-title">방법 1. 어드민 서버 직접 호출</div>
     <div class="task-desc">
-      러쉬 상품권은 금액권과 함께 카드 스킨을 선물할 수 있습니다. 선물 받은 사람 또는 본인이 스스로 구매한 사람은 다양한 스킨을 수집할 수 있도록 재미 요소를 더해 사용자 화면을 설계했습니다.
+      가장 간단한 방법은 서빙 서버에서 어드민 서버로 필요한 순간에 매번 요청하는 것입니다. 다만 이러한 방법은 결국 서빙 서버에서 어드민 서버의 트래픽 전이로 서버에 부하가 걸릴 수 있게 됩니다.
     </div>
 
-    <img class="task-img" src="./custom/content_giftcard_02.jpg">
+    <img class="task-img" src="./custom/content_featureflag_02.jpg">
 
+    <div class="task-title">방법 2. 어드민 서버 polling + 로컬 캐시</div>
     <div class="task-desc">
-      스킨 디자인에는 러쉬의 다양한 제품 이미지를 활용했습니다. 색감 · 텍스처로  간접 감각을 자극하여 사용자에게 시각 · 촉각 · 청각 · 후각 등의 정보를 연상할 수 있도록 유도했습니다.
+      polling은 일정한 주기로 특정 조건을 만족할 때 송수신 등의 자료처리를 하는 직접 호출 방식을 말합니다. 주기적인 polling을 통해 어드민 서버의 설정 정보를 로컬 캐시에 저장하는 방식을 적용할 수 있습니다. 비교적 트래픽 전이를 낮출 수 있는 방법이지만 다음 polling 전까지는 수정된 최신 설정 정보가 서빙에 반영되지 않아 장애가 유지될 수 있습니다.
     </div>
 
-    <img class="task-img" src="./custom/content_giftcard_03.jpg">
+    <img class="task-img" src="./custom/content_featureflag_03.jpg">
 
-    <div class="task-title">유료 멤버십 연계 : 상품권 혜택 제공</div>
+    <div class="task-title">방법 3. 메시지 브로커 + 로컬 캐시</div>
     <div class="task-desc">
-      ‘러쉬 어스’는 고객 대상 온·오프라인 통합 서비스 및 혜택을 제공하며 고객 경험을 다양화하고자 출시한 유료 멤버십입니다. 총 4가지의 혜택을 제공하고자 했으며 그 첫 번째 혜택으로 멤버십 전용 5.5만원을 지급하게 되었습니다.
+      서로 다른 시스템이 직접 연결되지 않고도 정보를 주고받을 수 있게 도와주는 중간 역할의 시스템(메시지 브로커)의 도움을 받을 수 있습니다. 어드민 서버에서 어떤 설정이 바뀌었을 때, 그 내용을 브로커에게 알립니다. 그러면 알림을 신청해둔 서빙 서버가 자동으로 그 정보를 받아서, 자기 안에 저장해 놓고(로컬 캐시), 별도로 어드민 서버를 다시 물어보지 않아도 최신 설정을 유지할 수 있게 되는 구조입니다.
     </div>
 
-    <img class="task-img" src="./custom/content_giftcard_04.jpg">
+    <img class="task-img" src="./custom/content_featureflag_04.jpg">
 
     <div class="task-desc">
-      구매 대금을 내지 않은 프로모션성 무상 지급 상품권으로 일반 상품권과는 다른 환불 정책이 필요한 점을 고려했으며 그 외에도 멤버십 가입비와 상품권 비용을 상계하여 회계 처리 될 수 있도록 유의하여 정책을 설계했습니다.
-      <br>
-      <br>더불어 상품권 서비스의 본 론칭 전, 비교적 적은 모수 대상으로 상품권 서비스를 오픈하여 사용자의 반응을 살피고자 했습니다.
+      기획자는 소통에 능통해야 합니다. 어려운 내용을 잘 소화해 이해하고 쉽게 설명할 수 있어야 한다고 생각합니다. 기술 블로그 이미지 작업 또한 소통에 대한 힘을 기를 수 있는 좋은 경험이었다고 생각합니다.
     </div>
 
 
@@ -140,7 +136,7 @@
 
   </div>
 
-  <div class="task-group">
+  <!-- <div class="task-group">
     <div class="chip-wrap">
       <button class="chip-active" data-target="task-group-1" onclick="chipOnClick(this)" id="chip-first">법무 검토</button>
       <button class="chip" data-target="task-group-2" onclick="chipOnClick(this)" id="chip-02">결제 설계</button>
@@ -346,7 +342,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
 
   <div class="note-wrap">
     <div class="note-title">유의 사항</div>
@@ -359,7 +355,7 @@
 
 <footer id="footer-wrap" class="footer-wrap">
   <!-- <button class="btn" id="btn-type-1">오퍼레터 발송</button> -->
-  <a class="btn" id="btn-type-2" href="https://www.lush.co.kr/m/categories/index/voucher">서비스 페이지 방문</a>
+  <a class="btn" id="btn-type-2" href="https://tech.kakaopay.com/post/feature-flag/">서비스 페이지 방문</a>
 </footer>
 
 
